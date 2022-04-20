@@ -14,7 +14,7 @@ exports.minimumPermissionLevelRequired = (required_permission_level) => {
 };
 
 exports.onlySameUserOrAdminCanDoThisAction = (req, res, next) => {
-    // console.log("params",req.params)
+    console.log("params",req.params)
     if(req.body.guestUser){
         return next();
     }
