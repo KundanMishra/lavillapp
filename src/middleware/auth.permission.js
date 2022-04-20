@@ -20,7 +20,7 @@ exports.onlySameUserOrAdminCanDoThisAction = (req, res, next) => {
     }
     let user_permission_level = parseInt(req.jwt.permissionLevel);
     let userId = req.jwt.userId;
-    // console.log("token user id",userId)
+    console.log("token user id",userId)
     if (req.params && req.params.userId && userId === Number(req.params.userId)) {
         return next();
     } else if(req.body && req.body.userId && userId === Number(req.body.userId)) {
